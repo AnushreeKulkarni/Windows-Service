@@ -1,0 +1,16 @@
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\obj\Debug\WindowsServiceAssignment.ProjectInstaller.resources
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\obj\Debug\WindowsServiceAssignment.csproj.GenerateResource.cache
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\obj\Debug\WindowsServiceAssignment.csproj.CoreCompileInputs.cache
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\WindowsServiceAssignment.exe.config
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\WindowsServiceAssignment.exe
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\WindowsServiceAssignment.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\obj\Debug\WindowsServiceAssignment.exe
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\obj\Debug\WindowsServiceAssignment.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\obj\Debug\WindowsServiceAssignment.csprojAssemblyReference.cache
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\obj\Debug\WindowsServiceAssignment.csproj.CopyComplete
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\SMTP.dll
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\SMTP.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\SMTP.dll.config
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\CustomLogger.dll
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\CustomLogger.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\CustomLogger.dll.config

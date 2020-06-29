@@ -1,0 +1,6 @@
+C:\Users\drksu\source\repos\WindowsServiceAssignment\Logger\bin\Debug\WindowsServiceAssignment.dll
+C:\Users\drksu\source\repos\WindowsServiceAssignment\Logger\bin\Debug\WindowsServiceAssignment.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\Logger\obj\Debug\Logger.csproj.CoreCompileInputs.cache
+C:\Users\drksu\source\repos\WindowsServiceAssignment\Logger\obj\Debug\WindowsServiceAssignment.dll
+C:\Users\drksu\source\repos\WindowsServiceAssignment\Logger\obj\Debug\WindowsServiceAssignment.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\Logger\obj\Debug\Logger.csprojAssemblyReference.cache
