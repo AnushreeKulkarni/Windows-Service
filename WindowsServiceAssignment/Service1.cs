@@ -19,6 +19,7 @@ using System.Text.RegularExpressions;
 using System.Net.Mail;
 using WindowsServiceAssignment.SMTPDemo;
 using WindowsServiceAssignment.CustomLogger;
+using WindowsServiceAssignment.DataAccessLayer;
 
 
 
@@ -29,6 +30,7 @@ namespace WindowsServiceAssignment.WindowsServiceAssignment
         string myPath = ConfigurationManager.AppSettings["myPath"];
         string inputxmlPath = ConfigurationManager.AppSettings["inputxmlPath"];
         SendMail mail = new SendMail();
+        DataAccess access = new DataAccess();
         Logger log = new Logger();
         Timer timer = new Timer();
         public Service1()
@@ -39,12 +41,19 @@ namespace WindowsServiceAssignment.WindowsServiceAssignment
             //number in milisecinds  
             timer.Interval = 60000;
             timer.Enabled = true;
-
-
         }
 
         private void OnElapsedTime(object source, ElapsedEventArgs e)
         {
+            List<DataAccessLayer.Employee> list;
+            //Read Data from .txt file and store in a list
+            list = access.GetEmployeeDetails();
+            //Store data from list in Database
+            access.WriteToDatabase(list);
+            //Acquired data from Database
+            list = access.GetDetailsFromDatabase();
+            //Serialize the input data from database and store it in .xml file
+            access.WriteXML(list);
             var curTime = DateTime.Now;
             int hour = curTime.Hour;
             int min = curTime.Minute;
