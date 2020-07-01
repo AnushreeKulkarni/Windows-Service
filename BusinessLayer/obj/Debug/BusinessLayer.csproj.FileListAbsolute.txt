@@ -8,7 +8,7 @@ C:\Users\drksu\source\repos\WindowsServiceAssignment\BusinessLayer\bin\Debug\Cus
 C:\Users\drksu\source\repos\WindowsServiceAssignment\BusinessLayer\bin\Debug\CustomLogger.dll.config
 C:\Users\drksu\source\repos\WindowsServiceAssignment\BusinessLayer\bin\Debug\SMTP.pdb
 C:\Users\drksu\source\repos\WindowsServiceAssignment\BusinessLayer\bin\Debug\SMTP.dll.config
+C:\Users\drksu\source\repos\WindowsServiceAssignment\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
 C:\Users\drksu\source\repos\WindowsServiceAssignment\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\drksu\source\repos\WindowsServiceAssignment\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\drksu\source\repos\WindowsServiceAssignment\BusinessLayer\obj\Debug\BusinessLayer.pdb
-C:\Users\drksu\source\repos\WindowsServiceAssignment\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache

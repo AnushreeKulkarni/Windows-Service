@@ -18,10 +18,8 @@ namespace WindowsServiceAssignment.DataAccessLayer
     public class DataAccess
     {
         string conectionString = @"Data Source=LAPTOP-KV7BV9V0\SQLEXPRESS;Initial Catalog=EmployeeCatalog;User Id=sa;Password=sa123";
-        string myPath = ConfigurationManager.AppSettings["myPath"];
         Logger log = new Logger();
         SendMail mail = new SendMail();
-
         public void WriteToDatabase(List<Employee> records)
         {
           
@@ -48,12 +46,12 @@ namespace WindowsServiceAssignment.DataAccessLayer
                         conn.Close();
                     }
                     log.WriteLog("Acquired data has been stored in Database" + Environment.NewLine);
-                    mail.SendEmail("First Database Update", "Data from text file has been successfully stored in Database");
+                    mail.SendEmail("Database Update", "Data from file has been successfully stored in Database");
                 }
                 catch (Exception ex)
                 {
                     log.WriteLog(ex.StackTrace);
-                    //mail.SendEmail("First Database Update", ex.Message);
+                    mail.SendEmail("First Database Update", ex.Message);
                 }
                 finally
                 {

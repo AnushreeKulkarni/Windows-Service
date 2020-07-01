@@ -62,12 +62,10 @@ namespace WindowsServiceAssignment.BusinessLayer
                         }
                         emp.EmployeePlace = places;
                         employee.Add(emp);
-
                     }
-
                 }
 
-                log.WriteLog("Data read from Catalog.txt input file and stored in a list." + Environment.NewLine);
+                log.WriteLog("Data read from text input file and stored in a list." + Environment.NewLine);
                 return employee;
             }
 
@@ -95,8 +93,8 @@ namespace WindowsServiceAssignment.BusinessLayer
                 {
                     serializer.Serialize(writer, catalog);
                 }
-                log.WriteLog("Catalog.xml File is Created." + Environment.NewLine);
-                log.WriteLog("Data is serialized and written to the Catalog.xml." + Environment.NewLine);
+                log.WriteLog("Xml File is Created." + Environment.NewLine);
+                log.WriteLog("Data is serialized and written to the Xml file." + Environment.NewLine);
                 mail.SendEmail("XML file", "XML file has been written successfully.");
             }
             catch (Exception ex)
@@ -106,13 +104,11 @@ namespace WindowsServiceAssignment.BusinessLayer
             }
             finally
             {
-               
+             
             }
-
         }
         public List<Employee> GetEmployeeListXML()
-        {
-           
+        {         
             try
             {
                 List<Employee> result;
@@ -121,7 +117,7 @@ namespace WindowsServiceAssignment.BusinessLayer
                 {
                     result = (List<Employee>)serializer.Deserialize(read);
                 }
-                log.WriteLog("Data has been deserialized." + Environment.NewLine);
+                log.WriteLog("Data has been acquired and deserialized." + Environment.NewLine);
                 return result;
             }
             catch (Exception ex)
@@ -133,14 +129,11 @@ namespace WindowsServiceAssignment.BusinessLayer
                
             }
             return null;
-
         }
         public void StoreEmployeeListTXT(List<Employee> employee)
-        {
-        
+        {   
             string configTxtPath = ConfigurationManager.AppSettings["txtPath"];
             string txtPath = configTxtPath + "Catalog" + "_" + DateTime.Now.ToString("MMddyyyyHHmmss") + ".txt";
-
             try
             {
                 var myFile = File.Create(txtPath);
@@ -180,15 +173,14 @@ namespace WindowsServiceAssignment.BusinessLayer
                     }
 
                 }
-                log.WriteLog("Catalog.txt File is created" + Environment.NewLine);
-                log.WriteLog("Deserialized list is stored in Catalog.txt" + Environment.NewLine);
+                log.WriteLog("Text File is created" + Environment.NewLine);
+                log.WriteLog("Deserialized list is stored in Text file" + Environment.NewLine);
                 mail.SendEmail("TXT file", "TXT file has been written successfully.");
             }
             catch (Exception ex)
             {
                 log.WriteLog(ex.StackTrace);
                 mail.SendEmail("TXT file", ex.Message);
-
             }
             finally
             {

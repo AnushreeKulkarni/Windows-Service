@@ -16,7 +16,6 @@ namespace WindowsServiceAssignment.BusinessLayer
     public class Place
     {
         public string Places { get; set; }
-        //public string PlaceTwo { get; set; }
         public List<Address> EmployeeAddress { get; set; }
 
     }

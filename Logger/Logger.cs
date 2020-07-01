@@ -10,7 +10,6 @@ namespace WindowsServiceAssignment.CustomLogger
 {
    public class Logger
     {
-        //string logPath = ConfigurationManager.AppSettings["logPath"];
         string logPath = ConfigurationManager.AppSettings["logPath"];
         public void CreateLogFile()
         {

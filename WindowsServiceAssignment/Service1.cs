@@ -30,9 +30,9 @@ namespace WindowsServiceAssignment.WindowsServiceAssignment
     {
         string myPath = ConfigurationManager.AppSettings["myPath"];
         string inputxmlPath = ConfigurationManager.AppSettings["inputxmlPath"];
-        BusinessLogic business = new BusinessLayer.BusinessLogic();
-        SendMail mail = new SendMail();
+        BusinessLogic business = new BusinessLogic();
         DataAccess access = new DataAccess();
+        SendMail mail = new SendMail();
         Logger log = new Logger();
         Timer timer = new Timer();
         public Service1()

@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Mail;
 
+
 namespace WindowsServiceAssignment.SMTPDemo
 {
    public class SendMail
     {
+      
         public void SendEmail(string subject , string body)
         {
             try
@@ -30,7 +32,7 @@ namespace WindowsServiceAssignment.SMTPDemo
             }
             catch(Exception ex)
             {
-                Console.WriteLine(ex.Message);
+               
             }
         }
         }

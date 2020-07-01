@@ -4,4 +4,3 @@ C:\Users\drksu\source\repos\WindowsServiceAssignment\Logger\bin\Debug\CustomLogg
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Logger\obj\Debug\CustomLogger.csproj.CoreCompileInputs.cache
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Logger\obj\Debug\CustomLogger.dll
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Logger\obj\Debug\CustomLogger.pdb
-C:\Users\drksu\source\repos\WindowsServiceAssignment\Logger\obj\Debug\CustomLogger.csprojAssemblyReference.cache

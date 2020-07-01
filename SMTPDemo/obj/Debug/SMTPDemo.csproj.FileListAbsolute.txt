@@ -5,10 +5,10 @@ C:\Users\drksu\source\repos\SMTPDemo\SMTPDemo\bin\Debug\SMTPDemo.exe
 C:\Users\drksu\source\repos\SMTPDemo\SMTPDemo\bin\Debug\SMTPDemo.pdb
 C:\Users\drksu\source\repos\SMTPDemo\SMTPDemo\obj\Debug\SMTPDemo.exe
 C:\Users\drksu\source\repos\SMTPDemo\SMTPDemo\obj\Debug\SMTPDemo.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\obj\Debug\SMTPDemo.csprojAssemblyReference.cache
+C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\obj\Debug\SMTPDemo.csproj.CoreCompileInputs.cache
 C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\bin\Debug\SMTP.dll.config
 C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\bin\Debug\SMTP.dll
 C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\bin\Debug\SMTP.pdb
-C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\obj\Debug\SMTPDemo.csproj.CoreCompileInputs.cache
 C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\obj\Debug\SMTP.dll
 C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\obj\Debug\SMTP.pdb
-C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\obj\Debug\SMTPDemo.csprojAssemblyReference.cache
