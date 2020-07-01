@@ -12,3 +12,6 @@ C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\CustomLo
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\SMTP.pdb
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\SMTP.dll.config
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\obj\Debug\DataAccessLayer.csproj.CopyComplete
+C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\BusinessLayer.dll
+C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\BusinessLayer.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\BusinessLayer.dll.config

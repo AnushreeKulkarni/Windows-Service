@@ -11,3 +11,4 @@ C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\bin\Debug\SMTP.pdb
 C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\obj\Debug\SMTPDemo.csproj.CoreCompileInputs.cache
 C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\obj\Debug\SMTP.dll
 C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\obj\Debug\SMTP.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\SMTPDemo\obj\Debug\SMTPDemo.csprojAssemblyReference.cache

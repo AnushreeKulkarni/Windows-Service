@@ -17,3 +17,6 @@ C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\ob
 C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\obj\Debug\WindowsServiceAssignment.csproj.CopyComplete
 C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\obj\Debug\WindowsServiceAssignment.exe
 C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\obj\Debug\WindowsServiceAssignment.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\BusinessLayer.dll
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\BusinessLayer.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\BusinessLayer.dll.config

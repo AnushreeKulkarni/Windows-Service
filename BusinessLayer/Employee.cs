@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsServiceAssignment.WindowsServiceAssignment
+namespace WindowsServiceAssignment.BusinessLayer
 {
     public class Employee
     {
@@ -14,11 +14,11 @@ namespace WindowsServiceAssignment.WindowsServiceAssignment
         public List<Place> EmployeePlace { get; set; }
     }
     public class Place
-    { 
+    {
         public string Places { get; set; }
         //public string PlaceTwo { get; set; }
         public List<Address> EmployeeAddress { get; set; }
-        
+
     }
     public class Address
     {
@@ -26,6 +26,4 @@ namespace WindowsServiceAssignment.WindowsServiceAssignment
 
     }
 
-        
-    
 }
