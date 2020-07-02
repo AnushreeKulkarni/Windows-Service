@@ -39,34 +39,19 @@ namespace WindowsServiceAssignment.WindowsServiceAssignment
         {
             InitializeComponent();
             log.CreateLogFile();
-            //timer.Elapsed += new ElapsedEventHandler(OnElapsedTime);
-            ////number in milisecinds
-            //timer.Interval = 60000;
-            //timer.Enabled = true;
-            Employee em;
-            em = access.GetEmployee(1000);
+            timer.Elapsed += new ElapsedEventHandler(OnElapsedTime);
+            //number in milisecinds
+            timer.Interval = 60000;
+            timer.Enabled = true;
+            
 
         }
 
         private void OnElapsedTime(object source, ElapsedEventArgs e)
         {
-            List<BusinessLayer.Employee> list;
-            //Gets data from txt file and stores in list
-            list = business.EmployeeDetail();
-            //stores the data from list to database
-            access.WriteToDatabase(list);
-            //acquires stored data from database and stores in list
-            list = access.GetDetailsFromDatabase();
-            //serializes the list and stores the serialized output in .xml file
-            business.WriteXML(list);
-            //Gets data from xml file and deserializes it
-            list = business.GetEmployeeListXML();
-            //stores the data from list to database
-            access.WriteToDatabase(list);
-            //acquires data from database and stores in list
-            list = access.GetDetailsFromDatabase();
-            //stores data from list to txt file
-            business.StoreEmployeeListTXT(list);
+
+            Employee em;
+            em = access.GetEmployee(1000);
 
             var curTime = DateTime.Now;
             int hour = curTime.Hour;
@@ -86,6 +71,30 @@ namespace WindowsServiceAssignment.WindowsServiceAssignment
                 me = business.GetEmployeeListXML();
                 // Store the deserialized list in .txt file
                 business.StoreEmployeeListTXT(me);
+            }
+            else if(hour%2==0 && min==30)
+            {
+                List<BusinessLayer.Employee> list;
+                //Gets data from txt file and stores in list
+                list = business.EmployeeDetail();
+                //stores the data from list to database
+                access.WriteToDatabase(list);
+                //acquires stored data from database and stores in list
+                list = access.GetDetailsFromDatabase();
+                //serializes the list and stores the serialized output in .xml file
+                business.WriteXML(list);
+            }
+            else if(hour %2==1 && min==15)
+            {
+                List<BusinessLayer.Employee> list;
+                //Gets data from xml file and stores in list
+                list = business.GetEmployeeListXML();
+                //stores the data from list to database
+                access.WriteToDatabase(list);
+                //acquires data from database and stores in list
+                list = access.GetDetailsFromDatabase();
+                //stores data from list to txt file
+                business.StoreEmployeeListTXT(list);
             }
 
 
