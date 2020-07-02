@@ -24,6 +24,7 @@ namespace WPFAssignment
     {
         DataAccess access = new DataAccess();
         BusinessLogic logic = new BusinessLogic();
+      
         public MainWindow()
         {
             InitializeComponent();
@@ -31,8 +32,8 @@ namespace WPFAssignment
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-           
-          
+
+    
             if (String.IsNullOrEmpty(txtInput.Text))
             {
                 lblErrorMessage.Content = "Please enter ID";
@@ -41,25 +42,31 @@ namespace WPFAssignment
             {
                 lblErrorMessage.Content = "Please enter valid ID";
             }
-           else if (Convert.ToInt32(txtInput.Text) <= 0 || Convert.ToInt32(txtInput.Text) >= 2000)
-            {
-                lblErrorMessage.Content = "No Records Found";
-
-            }
+          
             else
             {
                 lblErrorMessage.Content = "";
                 int a = Convert.ToInt32(txtInput.Text);
                 Employee em;
                 em = access.GetEmployee(a);
-                txtOutputId.Text = em.EmployeeID;
-                txtOuputName.Text = em.EmployeeName;
-                txtOutputEmail.Text = em.EmployeeEmail;
-                dropdown1.Items.Add(em.EmployeePlace[0].Places);
-                dropdown1.Items.Add(em.EmployeePlace[1].Places);
+                if (em!=null)
+                {
+                    txtOutputId.Text = em.EmployeeID;
+                    txtOuputName.Text = em.EmployeeName;
+                    txtOutputEmail.Text = em.EmployeeEmail;
+                    dropdown1.Items.Add(em.EmployeePlace[0].Places);
+                    dropdown1.Items.Add(em.EmployeePlace[1].Places);
+                }
+                else
+                {
+                    
+                    lblErrorMessage.Content = "No records found";
+                }
+                
+            }
 
             }
-        }
+        
 
         private void dropdown1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

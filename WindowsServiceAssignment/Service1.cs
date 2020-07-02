@@ -43,7 +43,8 @@ namespace WindowsServiceAssignment.WindowsServiceAssignment
             //number in milisecinds
             timer.Interval = 60000;
             timer.Enabled = true;
-            
+
+
 
         }
 

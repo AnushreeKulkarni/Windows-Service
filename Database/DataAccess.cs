@@ -127,20 +127,19 @@ namespace WindowsServiceAssignment.DataAccessLayer
             SqlCommand cmd;
 
             SqlDataReader reader;
-            string query = "select * from dbo.EmployeeDetails Where ID= " +ID;
-
+            string query = "select DISTINCT ID,Name,Email,PlaceOne,PincodeOne,PincodeTwo,PlaceTwo,PincodeThree,PincodeFour from dbo.EmployeeDetails Where ID= " +ID;
+            Employee emp = null;
 
             try
             {
                 conn.Open();
                 cmd = new SqlCommand(query, conn);
                 reader = cmd.ExecuteReader();
-                List<Employee> employee = new List<Employee>();
-             
+              
                 while (reader.Read())
                 {
-                
-                    Employee emp = new Employee();
+
+                    emp = new Employee();
                     List<Place> places = new List<Place>();
                     Place place1 = new Place();
                     Place place2 = new Place();
