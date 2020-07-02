@@ -118,7 +118,71 @@ namespace WindowsServiceAssignment.DataAccessLayer
              
             }
             return null;
-        }     
+        } 
+        
+        public Employee GetEmployee(int ID)
+        {
+        
+            SqlConnection conn = new SqlConnection(conectionString);
+            SqlCommand cmd;
+
+            SqlDataReader reader;
+            string query = "select * from dbo.EmployeeDetails Where ID= " +ID;
+
+
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand(query, conn);
+                reader = cmd.ExecuteReader();
+                List<Employee> employee = new List<Employee>();
+             
+                while (reader.Read())
+                {
+                
+                    Employee emp = new Employee();
+                    List<Place> places = new List<Place>();
+                    Place place1 = new Place();
+                    Place place2 = new Place();
+                    List<Address> addresses1 = new List<Address>();
+                    Address addr1 = new Address();
+                    Address addr2 = new Address();
+                    List<Address> addresses2 = new List<Address>();
+                    Address addr3 = new Address();
+                    Address addr4 = new Address();
+                    emp.EmployeeID = reader.GetValue(0).ToString();
+                    emp.EmployeeName = reader.GetValue(1).ToString();
+                    emp.EmployeeEmail = reader.GetValue(2).ToString();
+                    place1.Places = reader.GetValue(3).ToString();
+                    addr1.Pincodes = reader.GetValue(4).ToString();
+                    addr2.Pincodes = reader.GetValue(5).ToString();
+                    place2.Places = reader.GetValue(6).ToString();
+                    addr3.Pincodes = reader.GetValue(7).ToString();
+                    addr4.Pincodes = reader.GetValue(8).ToString();
+                    addresses1.Add(addr1);
+                    addresses1.Add(addr2);
+                    addresses2.Add(addr3);
+                    addresses2.Add(addr4);
+                    places.Add(place1);
+                    places.Add(place2);
+                    place1.EmployeeAddress = addresses1;
+                    place2.EmployeeAddress = addresses2;
+                    emp.EmployeePlace = places;
+                    return emp;
+                }
+                reader.Close();
+                reader.Dispose();
+                conn.Close();
+             
+            }
+            catch(Exception ex)
+            {
+                log.WriteLog(ex.StackTrace);
+            }
+            return null;
+
+        }
+
       
     }
 }
