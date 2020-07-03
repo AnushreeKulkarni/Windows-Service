@@ -12,6 +12,9 @@ using System.Xml;
 using WindowsServiceAssignment.CustomLogger;
 using WindowsServiceAssignment.SMTPDemo;
 using WindowsServiceAssignment.BusinessLayer;
+using System.Data;
+using System.Runtime.Remoting.Channels;
+using System.Net.Mime;
 
 namespace WindowsServiceAssignment.DataAccessLayer
 {
@@ -25,7 +28,10 @@ namespace WindowsServiceAssignment.DataAccessLayer
           
             using (SqlConnection conn = new SqlConnection(conectionString))
             {
-                SqlCommand cmd = new SqlCommand("Insert into EmployeeDetails(ID,Name,Email,PlaceOne,PincodeOne,PincodeTwo,PlaceTwo,PincodeThree,PincodeFour) values (@ID,@Name,@Email,@PlaceOne,@PincodeOne,@PincodeTwo,@PlaceTwo,@PincodeThree,@PincodeFour)");
+                SqlCommand cmd;
+                string file = File.ReadAllText(@"SQL\InsertQuery.sql");
+                string query = file;
+                cmd = new SqlCommand(query);
                 cmd.Connection = conn;
                 try
                 {
@@ -65,7 +71,8 @@ namespace WindowsServiceAssignment.DataAccessLayer
             SqlConnection conn = new SqlConnection(conectionString);
             SqlCommand cmd;
             SqlDataReader reader;
-            string query = "select * from dbo.EmployeeDetails";
+            string file = File.ReadAllText(@"SQL\GetEmployeeDetails.sql");
+            string query = file;
             try
             {
                 conn.Open();
@@ -127,15 +134,16 @@ namespace WindowsServiceAssignment.DataAccessLayer
             SqlCommand cmd;
 
             SqlDataReader reader;
-            string query = "select DISTINCT ID,Name,Email,PlaceOne,PincodeOne,PincodeTwo,PlaceTwo,PincodeThree,PincodeFour from dbo.EmployeeDetails Where ID= " +ID;
+            string sp = "GetEmployeeDetail";
             Employee emp = null;
 
             try
             {
                 conn.Open();
-                cmd = new SqlCommand(query, conn);
+                cmd = new SqlCommand(sp, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@ID", SqlDbType.Int).Value = ID;
                 reader = cmd.ExecuteReader();
-              
                 while (reader.Read())
                 {
 
@@ -167,7 +175,7 @@ namespace WindowsServiceAssignment.DataAccessLayer
                     place1.EmployeeAddress = addresses1;
                     place2.EmployeeAddress = addresses2;
                     emp.EmployeePlace = places;
-                    return emp;
+                  
                 }
                 reader.Close();
                 reader.Dispose();
@@ -178,7 +186,7 @@ namespace WindowsServiceAssignment.DataAccessLayer
             {
                 log.WriteLog(ex.StackTrace);
             }
-            return null;
+            return emp;
 
         }
 

@@ -20,3 +20,7 @@ C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bi
 C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\obj\Debug\WindowsServiceAssignment.csproj.CopyComplete
 C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\obj\Debug\WindowsServiceAssignment.exe
 C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\obj\Debug\WindowsServiceAssignment.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\Newtonsoft.Json.dll
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\Newtonsoft.Json.xml
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\SQL\GetEmployeeDetails.sql
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WindowsServiceAssignment\bin\Debug\SQL\InsertQuery.sql

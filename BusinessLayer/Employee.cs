@@ -12,6 +12,7 @@ namespace WindowsServiceAssignment.BusinessLayer
         public string EmployeeID { get; set; }
         public string EmployeeEmail { get; set; }
         public List<Place> EmployeePlace { get; set; }
+        
     }
     public class Place
     {

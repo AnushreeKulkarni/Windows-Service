@@ -32,40 +32,45 @@ namespace WPFAssignment
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-
-    
-            if (String.IsNullOrEmpty(txtInput.Text))
+            try
             {
-                lblErrorMessage.Content = "Please enter ID";
-            }
-            else if (String.IsNullOrWhiteSpace(txtInput.Text))
-            {
-                lblErrorMessage.Content = "Please enter valid ID";
-            }
-          
-            else
-            {
-                lblErrorMessage.Content = "";
-                int a = Convert.ToInt32(txtInput.Text);
-                Employee em;
-                em = access.GetEmployee(a);
-                if (em!=null)
+                if (String.IsNullOrEmpty(txtInput.Text))
                 {
-                    txtOutputId.Text = em.EmployeeID;
-                    txtOuputName.Text = em.EmployeeName;
-                    txtOutputEmail.Text = em.EmployeeEmail;
-                    dropdown1.Items.Add(em.EmployeePlace[0].Places);
-                    dropdown1.Items.Add(em.EmployeePlace[1].Places);
+                    lblErrorMessage.Content = "Please enter ID";
                 }
+                else if (String.IsNullOrWhiteSpace(txtInput.Text))
+                {
+                    lblErrorMessage.Content = "Please enter valid ID";
+                }
+
                 else
                 {
-                    
-                    lblErrorMessage.Content = "No records found";
+                    lblErrorMessage.Content = "";
+                    int a = Convert.ToInt32(txtInput.Text);
+                    Employee em;
+                    em = access.GetEmployee(a);
+                    if (em != null)
+                    {
+                        txtOutputId.Text = em.EmployeeID;
+                        txtOuputName.Text = em.EmployeeName;
+                        txtOutputEmail.Text = em.EmployeeEmail;
+                        dropdown1.Items.Add(em.EmployeePlace[0].Places);
+                        dropdown1.Items.Add(em.EmployeePlace[1].Places);
+                    }
+                    else
+                    {
+
+                        lblErrorMessage.Content = "No records found";
+                    }
+
                 }
-                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error Occured");
             }
 
-            }
+        }
         
 
         private void dropdown1_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -73,21 +78,28 @@ namespace WPFAssignment
             int a = Convert.ToInt32(txtInput.Text);
             Employee em;
             em = access.GetEmployee(a);
-            if (dropdown1.SelectedItem.ToString() == em.EmployeePlace[0].Places)
+            try
             {
-                dropdown2.Items.Remove(em.EmployeePlace[1].EmployeeAddress[0].Pincodes);
-                dropdown2.Items.Remove(em.EmployeePlace[1].EmployeeAddress[1].Pincodes);
-                dropdown2.Items.Add(em.EmployeePlace[0].EmployeeAddress[0].Pincodes);
-                dropdown2.Items.Add(em.EmployeePlace[0].EmployeeAddress[1].Pincodes);
+                if (dropdown1.SelectedItem.ToString() == em.EmployeePlace[0].Places)
+                {
+                    dropdown2.Items.Remove(em.EmployeePlace[1].EmployeeAddress[0].Pincodes);
+                    dropdown2.Items.Remove(em.EmployeePlace[1].EmployeeAddress[1].Pincodes);
+                    dropdown2.Items.Add(em.EmployeePlace[0].EmployeeAddress[0].Pincodes);
+                    dropdown2.Items.Add(em.EmployeePlace[0].EmployeeAddress[1].Pincodes);
 
+                }
+                else
+                {
+                    dropdown2.Items.Remove(em.EmployeePlace[0].EmployeeAddress[0].Pincodes);
+                    dropdown2.Items.Remove(em.EmployeePlace[0].EmployeeAddress[1].Pincodes);
+                    dropdown2.Items.Add(em.EmployeePlace[1].EmployeeAddress[0].Pincodes);
+                    dropdown2.Items.Add(em.EmployeePlace[1].EmployeeAddress[1].Pincodes);
+
+                }
             }
-            else
+            catch(Exception)
             {
-                dropdown2.Items.Remove(em.EmployeePlace[0].EmployeeAddress[0].Pincodes);
-                dropdown2.Items.Remove(em.EmployeePlace[0].EmployeeAddress[1].Pincodes);
-                dropdown2.Items.Add(em.EmployeePlace[1].EmployeeAddress[0].Pincodes);
-                dropdown2.Items.Add(em.EmployeePlace[1].EmployeeAddress[1].Pincodes);
-         
+                MessageBox.Show("Error Occured");
             }
          
 
@@ -99,5 +111,7 @@ namespace WPFAssignment
         {
 
         }
+
+    
     }
 }

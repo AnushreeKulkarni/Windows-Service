@@ -26,3 +26,7 @@ C:\Users\drksu\source\repos\WindowsServiceAssignment\WPFAssignment\bin\Debug\Cus
 C:\Users\drksu\source\repos\WindowsServiceAssignment\WPFAssignment\bin\Debug\SMTP.pdb
 C:\Users\drksu\source\repos\WindowsServiceAssignment\WPFAssignment\bin\Debug\SMTP.dll.config
 C:\Users\drksu\source\repos\WindowsServiceAssignment\WPFAssignment\obj\Debug\WPFAssignment.csproj.CopyComplete
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WPFAssignment\obj\Debug\GridWindow.g.cs
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WPFAssignment\obj\Debug\GridWindow.baml
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WPFAssignment\bin\Debug\SQL\GetEmployeeDetails.sql
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WPFAssignment\bin\Debug\SQL\InsertQuery.sql
