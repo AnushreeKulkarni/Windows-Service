@@ -1,4 +1,5 @@
-C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\SQL\GetEmployeeDetails.sql
+C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\SQL\InsertQuery.sql
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\DataAccessLayer.dll.config
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\DataAccessLayer.dll
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\DataAccessLayer.pdb
@@ -12,8 +13,7 @@ C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\CustomLo
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\SMTP.pdb
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\SMTP.dll.config
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\obj\Debug\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\obj\Debug\DataAccessLayer.dll
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\obj\Debug\DataAccessLayer.pdb
-C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\SQL\GetEmployeeDetails.sql
-C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\SQL\InsertQuery.sql

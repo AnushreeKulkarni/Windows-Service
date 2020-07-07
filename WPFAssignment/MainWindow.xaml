@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFAssignment"
-        xmlns:DataAccessLayer="clr-namespace:WindowsServiceAssignment.DataAccessLayer;assembly=DataAccessLayer" x:Class="WPFAssignment.MainWindow" mc:Ignorable="d"  Title="MainWindow" Height="450" Width="800">
+        xmlns:DataAccessLayer="clr-namespace:WindowsServiceAssignment.DataAccessLayer;assembly=DataAccessLayer" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="WPFAssignment.MainWindow" mc:Ignorable="d"  Title="MainWindow" Height="450" Width="800">
     <Grid RenderTransformOrigin="0.525,0.589">
         <TextBox x:Name="txtInput" HorizontalAlignment="Left" Height="23" Margin="98,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.912,0.282" IsUndoEnabled="True" FontStyle="Italic"/>
         <TextBox x:Name="txtOuputName" HorizontalAlignment="Left" Height="23" Margin="98,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.459,1.712" FontStyle="Italic" IsReadOnly="True"/>
@@ -20,6 +20,7 @@
         <Label Content="Addresses:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="317,225,0,0"/>
         <ComboBox x:Name="dropdown2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="389,226,0,0" SelectionChanged="dropdown2_SelectionChanged"/>
         <Label x:Name="lblErrorMessage" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="246,78,0,0" Visibility="Visible" FontWeight="Bold" Foreground="Red"/>
+        <Button x:Name="btnRecords" Content="View records" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="678,367,0,0" Click="btnRecords_Click"/>
 
     </Grid>
 </Window>

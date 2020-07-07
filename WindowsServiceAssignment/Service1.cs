@@ -44,7 +44,6 @@ namespace WindowsServiceAssignment.WindowsServiceAssignment
             timer.Interval = 60000;
             timer.Enabled = true;
 
-
         }
 
         private void OnElapsedTime(object source, ElapsedEventArgs e)

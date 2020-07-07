@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using WindowsServiceAssignment.DataAccessLayer;
 using WindowsServiceAssignment.BusinessLayer;
 
+
 namespace WPFAssignment
 {
     /// <summary>
@@ -28,6 +29,8 @@ namespace WPFAssignment
         public MainWindow()
         {
             InitializeComponent();
+       
+
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
@@ -112,6 +115,27 @@ namespace WPFAssignment
 
         }
 
-    
+        private void btnRecords_Click(object sender, RoutedEventArgs e)
+        {    
+            try
+            {
+                GridWindow grid = new GridWindow();
+                grid.Show();
+                this.Close();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void dataGrid2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+          
+        }
+
+     
     }
 }

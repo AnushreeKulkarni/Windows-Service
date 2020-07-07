@@ -1,13 +1,14 @@
-﻿<Window x:Class="WPFAssignment.GridWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFAssignment"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="WPFAssignment.GridWindow"
         mc:Ignorable="d"
         Title="GridWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="dataGrid1" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="370" Margin="21,50,0,0" VerticalAlignment="Top" Width="752" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible">
+        <DataGrid x:Name="dataGrid1" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="370" Margin="21,40,0,0" VerticalAlignment="Top" Width="752" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible" SelectionChanged="dataGrid1_SelectionChanged_1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding EmployeeID}" IsReadOnly="True" MinWidth="50"/>
                 <DataGridTextColumn Header="Name" Binding="{Binding EmployeeName}" Width="80"/>
@@ -21,6 +22,10 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="btnExport" Content="Export" HorizontalAlignment="Left" Margin="670,10,0,0" VerticalAlignment="Top" Width="75" Click="btnExport_Click"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="570,10,0,0" VerticalAlignment="Top" Width="75" Click="btnBack_Click"/>
+        <Label Content="Filter by:" HorizontalAlignment="Left" Margin="21,4,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="dropdown2" HorizontalAlignment="Left" Margin="80,7,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="dropdown2_SelectionChanged"/>
+
 
     </Grid>
 </Window>

@@ -52,7 +52,7 @@ namespace WindowsServiceAssignment.DataAccessLayer
                         conn.Close();
                     }
                     log.WriteLog("Acquired data has been stored in Database" + Environment.NewLine);
-                    mail.SendEmail("Database Update", "Data from file has been successfully stored in Database");
+                    //mail.SendEmail("Database Update", "Data from file has been successfully stored in Database");
                 }
                 catch (Exception ex)
                 {

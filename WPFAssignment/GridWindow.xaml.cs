@@ -30,13 +30,27 @@ namespace WPFAssignment
     /// </summary>
     public partial class GridWindow : Window
     {
+        
+        List<Employee> empList;
+
+
         public GridWindow()
         {
             InitializeComponent();
             dataGrid1.ItemsSource = BinddataGrid();
+            DataAccess access = new DataAccess();
+            empList = access.GetDetailsFromDatabase();
+
+            dropdown2.Items.Add("Basic Filter");
+            dropdown2.Items.Add("Order by");
+            dropdown2.Items.Add("Join");
+            dropdown2.Items.Add("Group by");
+
+
         }
-        private List<Employee> BinddataGrid()
+        public List<Employee> BinddataGrid()
         {
+           
             try
             {
                 DataAccess access = new DataAccess();
@@ -50,6 +64,7 @@ namespace WPFAssignment
             }
             return null;
         }
+
 
 
         private void dataGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -92,6 +107,51 @@ namespace WPFAssignment
             }
 
             
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
+
+        private void dropdown2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           dataGrid1.ItemsSource = GetDetail();
+        }
+        public List<Employee> GetDetail()
+        {
+            List<Employee> list;
+            LinqMethods methods = new LinqMethods();
+            if (dropdown2.SelectedItem.ToString() == "Basic Filter")
+            {
+                
+                list = methods.BasicFilter(empList);
+                return list;
+            }
+            else if(dropdown2.SelectedItem.ToString()=="Order by")
+            {
+                list = methods.OrderBy(empList);
+                return list;
+            }
+            else if(dropdown2.SelectedItem.ToString()=="Join")
+            {
+                list = methods.Join(empList);
+                return list;
+            }
+            else if(dropdown2.SelectedItem.ToString()=="Group by")
+            {
+                list = methods.GroupBy(empList);
+                return list;
+            }
+            return null;
+            
+        }
+
+        private void dataGrid1_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
