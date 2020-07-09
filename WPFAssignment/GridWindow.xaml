@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:WPFAssignment"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="WPFAssignment.GridWindow"
         mc:Ignorable="d"
-        Title="GridWindow" Height="450" Width="800">
-    <Grid>
-        <DataGrid x:Name="dataGrid1" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="370" Margin="21,40,0,0" VerticalAlignment="Top" Width="752" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible" SelectionChanged="dataGrid1_SelectionChanged_1">
+        Title="GridWindow" Height="896.19" Width="800">
+    <Grid x:Name="lblAllResult" Margin="0,0,-0.4,0.4">
+        <DataGrid x:Name="dataGrid1" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="380" Margin="10,255,0,0" VerticalAlignment="Top" Width="752" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible" SelectionChanged="dataGrid1_SelectionChanged_1">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding EmployeeID}" IsReadOnly="True" MinWidth="50"/>
                 <DataGridTextColumn Header="Name" Binding="{Binding EmployeeName}" Width="80"/>
@@ -25,6 +25,28 @@
         <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="570,10,0,0" VerticalAlignment="Top" Width="75" Click="btnBack_Click"/>
         <Label Content="Filter by:" HorizontalAlignment="Left" Margin="21,4,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="dropdown2" HorizontalAlignment="Left" Margin="80,7,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="dropdown2_SelectionChanged"/>
+        <Label x:Name="lblAny" Content="Any:" HorizontalAlignment="Left" Margin="414,35,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblAnyResult" Content="result" HorizontalAlignment="Left" Margin="453,35,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblAll" Content="All:" HorizontalAlignment="Left" Margin="422,61,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblAllResult1" Content="result" HorizontalAlignment="Left" Margin="453,61,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblContain" Content="Contains:" HorizontalAlignment="Left" Margin="388,92,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblContainResult" Content="result" HorizontalAlignment="Left" Margin="453,92,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblAvg" Content="Average:" HorizontalAlignment="Left" Margin="43,35,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblAvgResult" Content="result" HorizontalAlignment="Left" Margin="104,35,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblMin" Content="Minimum ID:" HorizontalAlignment="Left" Margin="21,66,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblMinResult" Content="result" HorizontalAlignment="Left" Margin="106,66,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblMax" Content="Maximum ID:" HorizontalAlignment="Left" Margin="21,97,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblMaxResult" Content="result" HorizontalAlignment="Left" Margin="106,97,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCount" Content="No. of IDs greater than ID-1700:" HorizontalAlignment="Left" Margin="170,35,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblCountResult" Content="result" HorizontalAlignment="Left" Margin="354,35,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSum" Content="Sum of all IDs:" HorizontalAlignment="Left" Margin="264,61,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSumResult" Content="result" HorizontalAlignment="Left" Margin="354,61,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblElementAt" Content="Element at index 0:" HorizontalAlignment="Left" Margin="21,167,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblElementAtResult" Content="result" HorizontalAlignment="Left" Margin="136,167,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblFirst" Content="First ID after ID-1500:" HorizontalAlignment="Left" Margin="21,198,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblFirstResult" Content="result" HorizontalAlignment="Left" Margin="144,198,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblLast" Content="Last ID before ID-1600:" HorizontalAlignment="Left" Margin="21,229,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblLastResult" Content="result" HorizontalAlignment="Left" Margin="152,229,0,0" VerticalAlignment="Top"/>
 
 
     </Grid>

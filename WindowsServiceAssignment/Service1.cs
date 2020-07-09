@@ -39,10 +39,30 @@ namespace WindowsServiceAssignment.WindowsServiceAssignment
         {
             InitializeComponent();
             log.CreateLogFile();
-            timer.Elapsed += new ElapsedEventHandler(OnElapsedTime);
-            //number in milisecinds
-            timer.Interval = 60000;
-            timer.Enabled = true;
+            //timer.Elapsed += new ElapsedEventHandler(OnElapsedTime);
+            ////number in milisecinds
+            //timer.Interval = 60000;
+            //timer.Enabled = true;
+
+            LinqMethods me = new LinqMethods();
+            List<Employee> met = access.GetDetailsFromDatabase();
+            me.LQuantifiersAny(met);
+            me.LQuantifiersAll(met);
+            me.LQuantifiersContain(met);
+            me.AggregateAvg(met);
+            me.AggregateMin(met);
+            me.AggregateMax(met);
+            me.AggregateCount(met);
+            me.AggregateSum(met);
+            me.ElementAt(met);
+            me.ElementAtorDefault(met);
+            me.First(met);
+            me.FirstOrDefault(met);
+            //me.Single(met);
+            me.Last(met);
+            me.Distinct(met);
+            me.BasicFilter(met);
+            
 
         }
 

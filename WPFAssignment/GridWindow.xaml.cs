@@ -45,7 +45,10 @@ namespace WPFAssignment
             dropdown2.Items.Add("Order by");
             dropdown2.Items.Add("Join");
             dropdown2.Items.Add("Group by");
-
+            dropdown2.Items.Add("Quantifiers");
+            dropdown2.Items.Add("Aggregate Functions");
+            dropdown2.Items.Add("Element Operators");
+            dropdown2.Items.Add("Set Operators");
 
         }
         public List<Employee> BinddataGrid()
@@ -143,6 +146,55 @@ namespace WPFAssignment
             else if(dropdown2.SelectedItem.ToString()=="Group by")
             {
                 list = methods.GroupBy(empList);
+                return list;
+            }
+            else if(dropdown2.SelectedItem.ToString()=="Quantifiers")
+            {
+                bool result;
+               result= methods.LQuantifiersAny(empList);
+                    lblAnyResult.Content = result;
+               result = methods.LQuantifiersAll(empList);
+                    lblAllResult1.Content = result;
+               result = methods.LQuantifiersContain(empList);
+                    lblContainResult.Content = result;              
+
+            }
+            else if(dropdown2.SelectedItem.ToString()=="Aggregate Functions")
+            {
+                double result;
+                result = methods.AggregateAvg(empList);
+                lblAvgResult.Content = result;
+                result = methods.AggregateMin(empList);
+                lblMinResult.Content = result;
+                result = methods.AggregateMax(empList);
+                lblMaxResult.Content = result;
+                result = methods.AggregateCount(empList);
+                lblCountResult.Content = result;
+                result = methods.AggregateSum(empList);
+                lblSumResult.Content = result;
+            }
+            else if(dropdown2.SelectedItem.ToString()=="Element Operators")
+            {
+                string result;
+                result = methods.ElementAt(empList);
+                lblElementAtResult.Content = result;
+                result = methods.First(empList);
+                lblFirstResult.Content = result;
+                result = methods.Last(empList);
+                lblLastResult.Content = result;
+            }
+            else if(dropdown2.SelectedItem.ToString()=="Set Operators")
+            {
+                //list = methods.Distinct(empList);
+                //return list;
+
+                //list = methods.Except(empList);
+                //return list;
+
+                //list = methods.Intersect(empList);
+                //return list;
+
+                list = methods.Union(empList);
                 return list;
             }
             return null;
