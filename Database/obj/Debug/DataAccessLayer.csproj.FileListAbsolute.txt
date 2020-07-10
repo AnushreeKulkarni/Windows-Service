@@ -17,3 +17,4 @@ C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\obj\Debug\DataAcce
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\obj\Debug\DataAccessLayer.dll
 C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\obj\Debug\DataAccessLayer.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\Database\bin\Debug\SQL\UpdateQuery.sql

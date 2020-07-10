@@ -26,3 +26,4 @@ C:\Users\drksu\source\repos\WindowsServiceAssignment\DataAccessLayer.Tests\obj\D
 C:\Users\drksu\source\repos\WindowsServiceAssignment\DataAccessLayer.Tests\obj\Debug\BusinessLayer.Tests.csproj.CopyComplete
 C:\Users\drksu\source\repos\WindowsServiceAssignment\DataAccessLayer.Tests\obj\Debug\BusinessLayer.Tests.dll
 C:\Users\drksu\source\repos\WindowsServiceAssignment\DataAccessLayer.Tests\obj\Debug\BusinessLayer.Tests.pdb
+C:\Users\drksu\source\repos\WindowsServiceAssignment\DataAccessLayer.Tests\bin\Debug\SQL\UpdateQuery.sql

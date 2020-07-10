@@ -190,6 +190,29 @@ namespace WindowsServiceAssignment.DataAccessLayer
 
         }
 
+        public void UpdateEmployee(int ID,string Name,string Email,string PlaceOne,string AddressOne, string AddressTwo,string PlaceTwo,string AddressThree,string AddressFour)
+        {
+            SqlConnection conn = new SqlConnection(conectionString);
+            SqlCommand cmd;
+            string file = File.ReadAllText(@"SQL\UpdateQuery.sql") + ID;
+            string query = file;
+            cmd = new SqlCommand(query);
+            cmd.Connection = conn;
+            cmd.Parameters.AddWithValue("@name", Name);
+            cmd.Parameters.AddWithValue("@email", Email);
+            cmd.Parameters.AddWithValue("@placeOne", PlaceOne);
+            cmd.Parameters.AddWithValue("@addressOne", AddressOne);
+            cmd.Parameters.AddWithValue("@addressTwo", AddressTwo);
+            cmd.Parameters.AddWithValue("@placeTwo", PlaceTwo);
+            cmd.Parameters.AddWithValue("@pincodeThree", AddressThree);
+            cmd.Parameters.AddWithValue("@pincodeFour", AddressFour);
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
+            conn.Close();
+
+        }
+
       
     }
 }

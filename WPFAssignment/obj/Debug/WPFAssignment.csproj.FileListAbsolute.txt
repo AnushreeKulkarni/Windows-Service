@@ -32,3 +32,4 @@ C:\Users\drksu\source\repos\WindowsServiceAssignment\WPFAssignment\bin\Debug\WPF
 C:\Users\drksu\source\repos\WindowsServiceAssignment\WPFAssignment\obj\Debug\WPFAssignment.csproj.CopyComplete
 C:\Users\drksu\source\repos\WindowsServiceAssignment\WPFAssignment\bin\Debug\Xceed.Wpf.Toolkit.dll
 C:\Users\drksu\source\repos\WindowsServiceAssignment\WPFAssignment\bin\Debug\Xceed.Wpf.Toolkit.xml
+C:\Users\drksu\source\repos\WindowsServiceAssignment\WPFAssignment\bin\Debug\SQL\UpdateQuery.sql
