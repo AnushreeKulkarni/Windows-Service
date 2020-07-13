@@ -46,11 +46,11 @@ namespace WebApplicationAssignment
                 ddlAddresses4.Visible = true;
                 btnSave.Visible = true;
                 ddlPlaces1.Items.Add("Please Select");
-                ddlPlaces1.Items.Add(emp.EmployeePlace[0].Places);
-                ddlPlaces1.Items.Add(emp.EmployeePlace[1].Places);
+                ddlPlaces1.Items.Add("Pune");
+                ddlPlaces1.Items.Add("Mumbai");
                 ddlPlaces2.Items.Add("Please Select");
-                ddlPlaces2.Items.Add(emp.EmployeePlace[0].Places);
-                ddlPlaces2.Items.Add(emp.EmployeePlace[1].Places);
+                ddlPlaces2.Items.Add("Pune");
+                ddlPlaces2.Items.Add("Mumbai");
             }
             catch(Exception ex)
             {
@@ -91,30 +91,33 @@ namespace WebApplicationAssignment
             emp = access.GetEmployee(id);
             try
             {
-                if (ddlPlaces1.SelectedValue.ToString() == emp.EmployeePlace[0].Places)
-                {
-                    ddlAddresses1.Items.Remove(emp.EmployeePlace[1].EmployeeAddress[0].Pincodes);
-                    ddlAddresses1.Items.Remove(emp.EmployeePlace[1].EmployeeAddress[1].Pincodes);
-                    ddlAddresses2.Items.Remove(emp.EmployeePlace[1].EmployeeAddress[0].Pincodes);
-                    ddlAddresses2.Items.Remove(emp.EmployeePlace[1].EmployeeAddress[1].Pincodes);
+                ddlAddresses1.Items.Add("Please Select");
+                ddlAddresses2.Items.Add("Please Select");
 
-                    ddlAddresses1.Items.Add(emp.EmployeePlace[0].EmployeeAddress[0].Pincodes);
-                    ddlAddresses1.Items.Add(emp.EmployeePlace[0].EmployeeAddress[1].Pincodes);
-                    ddlAddresses2.Items.Add(emp.EmployeePlace[0].EmployeeAddress[0].Pincodes);
-                    ddlAddresses2.Items.Add(emp.EmployeePlace[0].EmployeeAddress[1].Pincodes);
+                if (ddlPlaces1.SelectedValue.ToString() == "Pune")
+                {
+                    ddlAddresses1.Items.Remove("411057");
+                    ddlAddresses1.Items.Remove("511057");
+                    ddlAddresses2.Items.Remove("411057");
+                    ddlAddresses2.Items.Remove("511057");
+
+                    ddlAddresses1.Items.Add("411051");
+                    ddlAddresses1.Items.Add("411057");
+                    ddlAddresses2.Items.Add("411051");
+                    ddlAddresses2.Items.Add("411057");
                 }
-                else if(ddlPlaces1.SelectedValue.ToString() == emp.EmployeePlace[1].Places)
+                else if(ddlPlaces1.SelectedValue.ToString() == "Mumbai")
                 {
 
-                    ddlAddresses1.Items.Remove(emp.EmployeePlace[0].EmployeeAddress[0].Pincodes);
-                    ddlAddresses1.Items.Remove(emp.EmployeePlace[0].EmployeeAddress[1].Pincodes);
-                    ddlAddresses2.Items.Remove(emp.EmployeePlace[0].EmployeeAddress[0].Pincodes);
-                    ddlAddresses2.Items.Remove(emp.EmployeePlace[0].EmployeeAddress[1].Pincodes);
+                    ddlAddresses1.Items.Remove("411051");
+                    ddlAddresses1.Items.Remove("411057");
+                    ddlAddresses2.Items.Remove("411051");
+                    ddlAddresses2.Items.Remove("411057");
 
-                    ddlAddresses1.Items.Add(emp.EmployeePlace[1].EmployeeAddress[0].Pincodes);
-                    ddlAddresses1.Items.Add(emp.EmployeePlace[1].EmployeeAddress[1].Pincodes);
-                    ddlAddresses2.Items.Add(emp.EmployeePlace[1].EmployeeAddress[0].Pincodes);
-                    ddlAddresses2.Items.Add(emp.EmployeePlace[1].EmployeeAddress[1].Pincodes);
+                    ddlAddresses1.Items.Add("411057");
+                    ddlAddresses1.Items.Add("511057");
+                    ddlAddresses2.Items.Add("411057");
+                    ddlAddresses2.Items.Add("511057");
 
 
                 }
@@ -134,30 +137,32 @@ namespace WebApplicationAssignment
             emp = access.GetEmployee(id);
             try
             {
-                if (ddlPlaces2.SelectedValue.ToString() == emp.EmployeePlace[0].Places)
+                ddlAddresses3.Items.Add("Please Select");
+                ddlAddresses4.Items.Add("Please Select");
+                if (ddlPlaces2.SelectedValue.ToString() == "Pune")
                 {
-                    ddlAddresses3.Items.Remove(emp.EmployeePlace[1].EmployeeAddress[0].Pincodes);
-                    ddlAddresses3.Items.Remove(emp.EmployeePlace[1].EmployeeAddress[1].Pincodes);
-                    ddlAddresses4.Items.Remove(emp.EmployeePlace[1].EmployeeAddress[0].Pincodes);
-                    ddlAddresses4.Items.Remove(emp.EmployeePlace[1].EmployeeAddress[1].Pincodes);
+                    ddlAddresses3.Items.Remove("411057");
+                    ddlAddresses3.Items.Remove("511057");
+                    ddlAddresses4.Items.Remove("411057");
+                    ddlAddresses4.Items.Remove("511057");
 
-                    ddlAddresses3.Items.Add(emp.EmployeePlace[0].EmployeeAddress[0].Pincodes);
-                    ddlAddresses3.Items.Add(emp.EmployeePlace[0].EmployeeAddress[1].Pincodes);
-                    ddlAddresses4.Items.Add(emp.EmployeePlace[0].EmployeeAddress[0].Pincodes);
-                    ddlAddresses4.Items.Add(emp.EmployeePlace[0].EmployeeAddress[1].Pincodes);
+                    ddlAddresses3.Items.Add("411051");
+                    ddlAddresses3.Items.Add("411057");
+                    ddlAddresses4.Items.Add("411051");
+                    ddlAddresses4.Items.Add("411057");
                 }
-                else if (ddlPlaces2.SelectedValue.ToString() == emp.EmployeePlace[1].Places)
+                else if (ddlPlaces2.SelectedValue.ToString() == "Mumbai")
                 {
 
-                    ddlAddresses3.Items.Remove(emp.EmployeePlace[0].EmployeeAddress[0].Pincodes);
-                    ddlAddresses3.Items.Remove(emp.EmployeePlace[0].EmployeeAddress[1].Pincodes);
-                    ddlAddresses4.Items.Remove(emp.EmployeePlace[0].EmployeeAddress[0].Pincodes);
-                    ddlAddresses4.Items.Remove(emp.EmployeePlace[0].EmployeeAddress[1].Pincodes);
+                    ddlAddresses3.Items.Remove("411051");
+                    ddlAddresses3.Items.Remove("411057");
+                    ddlAddresses4.Items.Remove("411051");
+                    ddlAddresses4.Items.Remove("411057");
 
-                    ddlAddresses3.Items.Add(emp.EmployeePlace[1].EmployeeAddress[0].Pincodes);
-                    ddlAddresses3.Items.Add(emp.EmployeePlace[1].EmployeeAddress[1].Pincodes);
-                    ddlAddresses4.Items.Add(emp.EmployeePlace[1].EmployeeAddress[0].Pincodes);
-                    ddlAddresses4.Items.Add(emp.EmployeePlace[1].EmployeeAddress[1].Pincodes);
+                    ddlAddresses3.Items.Add("411057");
+                    ddlAddresses3.Items.Add("511057");
+                    ddlAddresses4.Items.Add("411057");
+                    ddlAddresses4.Items.Add("511057");
 
                 }
             }

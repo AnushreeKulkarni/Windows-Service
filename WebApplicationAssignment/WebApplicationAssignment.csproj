@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="EditRecord.aspx" />
+    <Content Include="js\JavaScriptEdit.js" />
+    <Content Include="js\JavaScriptMain.js" />
     <Content Include="MainPage.aspx" />
     <Content Include="ViewEmployeeList.aspx" />
     <Content Include="Web.config" />
@@ -115,6 +117,7 @@
       <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
