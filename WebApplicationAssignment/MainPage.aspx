@@ -6,13 +6,18 @@
 <head runat="server">
     <title></title>
     <script src="js/JavaScriptMain.js"></script>
+    
+  
+
+    
 </head>
 <body>
+  
     <form id="form1" runat="server" >
         <div style="height: 455px; width: 1566px; background-color:beige"><br />
             <asp:Label ID="lbl1" runat="server" Text="Enter ID:" Font-Bold="True" Font-Names="Calibri"></asp:Label>
             <asp:TextBox ID="txtInput" runat="server" Height="22px"  style="margin-left: 15px"></asp:TextBox>
-            <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" OnClientClick="return validateForm();" style="margin-left: 26px" Text="Search" BackColor="#FF9999" BorderStyle="Groove" BorderWidth="5px" Height="38px" Width="98px" />
+            <asp:Button ID="btnSearch" class="btn btn-primary" runat="server" OnClick="btnSearch_Click" OnClientClick="return validateForm();" style="margin-left: 26px" Text="Search" BackColor="#FF9999" BorderStyle="Groove" BorderWidth="5px" Height="38px" Width="98px" />
             <br />
             <br />
             <br />

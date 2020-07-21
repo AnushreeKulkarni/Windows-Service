@@ -1,1 +1,0 @@
-Insert into EmployeeDetails(ID,Name,Email,PlaceOne,PincodeOne,PincodeTwo,PlaceTwo,PincodeThree,PincodeFour) values (@ID,@Name,@Email,@PlaceOne,@PincodeOne,@PincodeTwo,@PlaceTwo,@PincodeThree,@PincodeFour)

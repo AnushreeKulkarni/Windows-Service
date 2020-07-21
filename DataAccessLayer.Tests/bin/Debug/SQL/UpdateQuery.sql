@@ -1,1 +1,0 @@
-Update EmployeeDetails SET Name=@name, Email=@email,PlaceOne=@placeOne,PincodeOne=@addressOne,PincodeTwo=@addressTwo,PlaceTwo=@placeTwo,PincodeThree=@pincodeThree,PincodeFour=@pincodeFour Where ID=
