@@ -16,16 +16,16 @@ namespace WindowsServiceAssignment.SMTPDemo
             try
             {
                 MailMessage mail = new MailMessage();
-                mail.From = new MailAddress("anushreekulkarni141997@gmail.com");
-                mail.To.Add("Shashank.Ramdohkar@cognizant.com");
-                mail.To.Add("kulkarnianushree14@gmail.com");
+                mail.From = new MailAddress("xyz@gmail.com");
+                mail.To.Add("pqr@gmail.com");
+                mail.To.Add("qwerty@gmail.com");
                 mail.Subject = subject;
                 mail.Body = body;
                 using (SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com",587))
                 {
                     SmtpServer.EnableSsl = true;
                     SmtpServer.UseDefaultCredentials = false;
-                    SmtpServer.Credentials = new System.Net.NetworkCredential("anushreekulkarni141997@gmail.com", "Anushree123!");
+                    SmtpServer.Credentials = new System.Net.NetworkCredential("xyz@gmail.com", "");
                     SmtpServer.Send(mail);
                 }
                 Console.WriteLine("Mail Sent");
